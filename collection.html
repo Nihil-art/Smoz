@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMOZ | Collection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, #f8fafc 0%, #f1f5f9 100%);
+        }
+        .product-card:hover .product-img {
+            transform: scale(1.05);
+        }
+        .btn-hover {
+            transition: all 0.3s ease;
+        }
+        .btn-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .img11{
+            width: 100%;
+            border-radius: 1rem;
+        }
+        .btn11{
+            background-color: #4F46E5;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .btn11:hover{
+            background-color: #3730A3;
+        }
+
+        /* Fix for very narrow screens like 330px */
+        @media (max-width: 400px) {
+            .hero-section h1 {
+                font-size: 2.5rem !important;
+                line-height: 1.1 !important;
+            }
+            .hero-section .grid {
+                gap: 2rem !important;
+            }
+            .hero-section .space-y-8 > * + * {
+                margin-top: 1.5rem !important;
+            }
+            .hero-section .max-w-7xl {
+                max-width: 100% !important;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-extrabold tracking-tighter text-black">SMOZ<span class="text-indigo-600">.</span></div>
+            <!-- Hamburger button for mobile -->
+            <button id="mobile-menu-button" class="md:hidden text-slate-900 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <div id="desktop-menu" class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wider">
+                <a href="index.html#home" class="hover:text-indigo-600 transition">Home</a>
+                <a href="#products" class="hover:text-indigo-600 transition">Collection</a>
+                <a href="index.html#services" class="hover:text-indigo-600 transition">Services</a>
+                <a href="index.html#about" class="hover:text-indigo-600 transition">About</a>
+                <a href="index.html#contact" class="hover:text-indigo-600 transition">Contact</a>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden bg-white shadow-lg border-t border-slate-200 hidden">
+            <div class="px-6 py-4 space-y-4">
+                <a href="index.html#home" class="block text-slate-900 hover:text-indigo-600 transition">Home</a>
+                <a href="#products" class="block text-slate-900 hover:text-indigo-600 transition">Collection</a>
+                <a href="index.html#services" class="block text-slate-900 hover:text-indigo-600 transition">Services</a>
+                <a href="index.html#about" class="block text-slate-900 hover:text-indigo-600 transition">About</a>
+                <a href="index.html#contact" class="block text-slate-900 hover:text-indigo-600 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-6 hero-gradient overflow-hidden hero-section">
+        <div class="max-w-7xl mx-auto">
+            <div class="space-y-8 text-center">
+                <span class="inline-block px-4 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-bold uppercase tracking-widest">Complete Collection</span>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight">Explore Our <br><span class="text-indigo-600">Collection.</span></h1>
+                <p class="text-lg text-slate-600 max-w-md mx-auto">Browse through our premium selection of men's footwear, crafted for style and comfort.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
+                    <a href="#products"><button class="bg-black text-white px-8 py-4 rounded-xl font-bold btn-hover">Shop Now</button></a>
+                    <a href="#about"><button class="border border-slate-200 bg-white px-8 py-4 rounded-xl font-bold btn-hover">Learn More</button></a>
+                </div>
+                <div class="mt-12 flex justify-center">
+                    <div class="animate-bounce">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-2">Our Collection</h2>
+                <p class="text-slate-500">Discover all our premium styles for the modern gentleman.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="group product-card">
+                    <div class="bg-slate-100 rounded-2xl h-64 flex items-center justify-center mb-4 relative overflow-hidden">
+                        <span class="absolute top-4 left-4 bg-white px-2 py-1 rounded text-[10px] font-bold uppercase">Classic</span>
+                        <img src="https://thursdayboots.com/cdn/shop/files/1024x1024-Men-Executive-Black-012124-2_f67e70a6-1088-47b5-834b-6a9556e06bcb.jpg?v=1743794012&width=1024" alt="">
+                    </div>
+                    <h3 class="font-bold text-lg">Oxford Executive</h3>
+                    <p class="text-slate-500 mb-2">Premium Black Leather</p>
+                    <p class="font-extrabold text-indigo-600">₹46,499.00</p>
+                </div>
+                <!-- Product 2 -->
+                <div class="group product-card">
+                    <div class="bg-slate-100 rounded-2xl h-64 flex items-center justify-center mb-4 relative overflow-hidden">
+                        <span class="absolute top-4 left-4 bg-indigo-600 text-white px-2 py-1 rounded text-[10px] font-bold uppercase">Popular</span>
+                        <img src="https://rukminim2.flixcart.com/image/300/300/xif0q/shoe/l/h/k/7-dh100-black-eos-dorado-humano-black-original-imah8yarxjmyhm2y.jpeg" alt="">
+                    </div>
+                    <h3 class="font-bold text-lg">Midnight Suede Loafers</h3>
+                    <p class="text-slate-500 mb-2">Italian Craftsmanship</p>
+                    <p class="font-extrabold text-indigo-600">₹39,299.00</p>
+                </div>
+                <!-- Product 3 -->
+                <div class="group product-card">
+                    <div class="bg-slate-100 rounded-2xl h-64 flex items-center justify-center mb-4 relative overflow-hidden">
+                        <img src="https://www.blundstone.com/cdn/shop/files/product-image_v2_2391-USA_l_lifestyle_men_slider_2.jpg?v=1763431992&width=300" alt="">
+                    </div>
+                    <h3 class="font-bold text-lg">Heritage Chelsea Boots</h3>
+                    <p class="text-slate-500 mb-2">Tan Brown Suede</p>
+                    <p class="font-extrabold text-indigo-600">₹50,999.00</p>
+                </div>
+                <!-- Product 4 -->
+                <div class="group product-card">
+                    <div class="bg-slate-100 rounded-2xl h-64 flex items-center justify-center mb-4 relative overflow-hidden">
+                        <span class="absolute top-4 left-4 bg-green-500 text-white px-2 py-1 rounded text-[10px] font-bold uppercase">New</span>
+                        <img src="https://hips.hearstapps.com/hmg-prod/images/mhl-dresssneakers-rothys-1096-68d2dc93856a9.jpg?crop=0.939xw:0.939xh;0.0391xw,0&resize=1120:*" alt="">
+                    </div>
+                    <h3 class="font-bold text-lg">Minimalist Urban Sneaker</h3>
+                    <p class="text-slate-500 mb-2">All-Day Comfort Tech</p>
+                    <p class="font-extrabold text-indigo-600">₹22,499.00</p>
+                </div>
+                <!-- Product 5 -->
+                <div class="group product-card">
+                    <div class="bg-slate-100 rounded-2xl h-64 flex items-center justify-center mb-4 relative overflow-hidden">
+                        <span class="absolute top-4 left-4 bg-red-500 text-white px-2 py-1 rounded text-[10px] font-bold uppercase">Sale</span>
+                        <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8ea578fe7d424c6c8f1dae940114df74_9366/Ultraboost_22_Shoes_Black_HQ6350_01_standard.jpg" alt="">
+                    </div>
+                    <h3 class="font-bold text-lg">Performance Runner</h3>
+                    <p class="text-slate-500 mb-2">Advanced Cushioning</p>
+                    <p class="font-extrabold text-indigo-600">₹35,999.00</p>
+                </div>
+                <!-- Product 6 -->
+                <div class="group product-card">
+                    <div class="bg-slate-100 rounded-2xl h-64 flex items-center justify-center mb-4 relative overflow-hidden">
+                        <img src="https://www.clarks.com/dw/image/v2/BBNG_PRD/on/demandware.static/-/Sites-master-catalog-clarks/default/dw8b8b8b8b/images/hi-res/26161884_M_1.jpg?sw=2000&sh=2000&sm=fit" alt="">
+                    </div>
+                    <h3 class="font-bold text-lg">Casual Desert Boots</h3>
+                    <p class="text-slate-500 mb-2">Timeless Design</p>
+                    <p class="font-extrabold text-indigo-600">₹28,499.00</p>
+                </div>
+                <!-- Product 7 -->
+                <div class="group product-card">
+                    <div class="bg-slate-100 rounded-2xl h-64 flex items-center justify-center mb-4 relative overflow-hidden">
+                        <span class="absolute top-4 left-4 bg-yellow-500 text-white px-2 py-1 rounded text-[10px] font-bold uppercase">Limited</span>
+                        <img src="https://www.jdsports.co.uk/i/jdsports/16502002_01.jpg" alt="">
+                    </div>
+                    <h3 class="font-bold text-lg">Formal Brogues</h3>
+                    <p class="text-slate-500 mb-2">Elegant Pattern</p>
+                    <p class="font-extrabold text-indigo-600">₹42,999.00</p>
+                </div>
+                <!-- Product 8 -->
+                <div class="group product-card">
+                    <div class="bg-slate-100 rounded-2xl h-64 flex items-center justify-center mb-4 relative overflow-hidden">
+                        <img src="https://www.skechers.com/dw/image/v2/BGNZ_PRD/on/demandware.static/-/Sites-skechers-master/default/dw5b8b8b8b/images/large/232008_BKW.jpg?sw=800&sh=800&sm=fit" alt="">
+                    </div>
+                    <h3 class="font-bold text-lg">Comfort Slip-On</h3>
+                    <p class="text-slate-500 mb-2">Easy Wear</p>
+                    <p class="font-extrabold text-indigo-600">₹19,999.00</p>
+                </div>
+                <!-- Product 9 -->
+                <div class="group product-card">
+                    <div class="bg-slate-100 rounded-2xl h-64 flex items-center justify-center mb-4 relative overflow-hidden">
+                        <span class="absolute top-4 left-4 bg-purple-500 text-white px-2 py-1 rounded text-[10px] font-bold uppercase">Exclusive</span>
+                        <img src="https://www.converse.com/dw/image/v2/BJJF_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dw2b8b8b8b/images/a_107/a_08/162050C_A_107X1.jpg?sw=964" alt="">
+                    </div>
+                    <h3 class="font-bold text-lg">High-Top Classic</h3>
+                    <p class="text-slate-500 mb-2">Iconic Design</p>
+                    <p class="font-extrabold text-indigo-600">₹24,999.00</p>
+                </div>
+                <!-- Product 10 -->
+                <div class="group product-card">
+                    <div class="bg-slate-100 rounded-2xl h-64 flex items-center justify-center mb-4 relative overflow-hidden">
+                        <img src="https://www.timberland.com/dw/image/v2/BJRN_PRD/on/demandware.static/-/Sites-timberland-master/default/dw8b8b8b8b/images/medium/10061008_STD_ALT100.jpg?sw=800&sh=800&sm=fit" alt="">
+                    </div>
+                    <h3 class="font-bold text-lg">Outdoor Boot</h3>
+                    <p class="text-slate-500 mb-2">Waterproof</p>
+                    <p class="font-extrabold text-indigo-600">₹45,999.00</p>
+                </div>
+                <!-- Product 11 -->
+                <div class="group product-card">
+                    <div class="bg-slate-100 rounded-2xl h-64 flex items-center justify-center mb-4 relative overflow-hidden">
+                        <span class="absolute top-4 left-4 bg-orange-500 text-white px-2 py-1 rounded text-[10px] font-bold uppercase">Trendy</span>
+                        <img src="https://www.vans.com/dw/image/v2/BJMX_PRD/on/demandware.static/-/Sites-vans-master-catalog/default/dw5b8b8b8b/images/large/VN0A3WMAVNE_HERO.jpg?sw=800&sh=800&sm=fit" alt="">
+                    </div>
+                    <h3 class="font-bold text-lg">Skate Shoe</h3>
+                    <p class="text-slate-500 mb-2">Durable Sole</p>
+                    <p class="font-extrabold text-indigo-600">₹29,999.00</p>
+                </div>
+                <!-- Product 12 -->
+                <div class="group product-card">
+                    <div class="bg-slate-100 rounded-2xl h-64 flex items-center justify-center mb-4 relative overflow-hidden">
+                        <img src="https://www.newbalance.com/dw/image/v2/AAGI_PRD/on/demandware.static/-/Sites-nb-us-master/default/dw8b8b8b8b/images/large/MS327KA2_01_i.jpg?sw=800&sh=800&sm=fit" alt="">
+                    </div>
+                    <h3 class="font-bold text-lg">Running Shoe</h3>
+                    <p class="text-slate-500 mb-2">Lightweight</p>
+                    <p class="font-extrabold text-indigo-600">₹32,999.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 border-t border-slate-200 py-12 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="text-xl font-black mb-6 md:mb-0 uppercase italic">SMOZ</div>
+            <div class="flex space-x-8 text-sm text-slate-500 font-medium">
+                <a href="#" class="hover:text-black">WhatsApp</a>
+                <a href="#" class="hover:text-black">Instagram</a>
+            </div>
+            <p class="mt-6 md:mt-0 text-sm text-slate-400">&copy; 2024 Muhammed Nihil. SMOZ Shoes.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
